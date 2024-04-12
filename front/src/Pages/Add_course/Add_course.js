@@ -1,19 +1,24 @@
-import './Add_Animal_to_adopt.css'
-import { Header, Add_animall } from '../../../Componets'
+import './Add_course.css'
+// import axios from 'axios'
+// import { useState } from 'react'
+import { Header, Add_coursee } from '../../Componets'
+// import { useNavigate } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlus, faBell, faRightFromBracket, faHouse } from '@fortawesome/free-solid-svg-icons'
 
-const Add_Animal_to_adopt = () => {
+
+const Add_course = () => {
+
 
   return (
     <>
       <Header href1={"/Adopt"} a1={"Adopt"} href2={"/common_users"} a2={"FAQs"} href3={"/Animal_infoo"} a3={"My Animals"} href4={"/All_problem"} a4={"Forum"} href6={"/Notifications"} a6={<FontAwesomeIcon icon={faBell} />} href7={"/profile"} a7={<div id="login-btn" className="fas fa-user"></div>} href8={"/"} a8={<FontAwesomeIcon icon={faHouse} />} log={'/#'} log2={<div id="login-btn"><FontAwesomeIcon icon={faRightFromBracket} /></div>} />
 
       <div>
-        <div class="container" style={{ "margin-top": "270px", "margin-bottom": "70px" }}>
-          <div class="title">Add Animal</div>
+        <div class="container" style={{ "margin-top": "120px", "margin-bottom": "70px" }}>
+          <div class="title">Add Course</div>
           <div class="content">
-            <Add_animall />
+            <Add_coursee />
           </div>
         </div>
       </div>
@@ -21,4 +26,4 @@ const Add_Animal_to_adopt = () => {
   )
 }
 
-export default Add_Animal_to_adopt
+export default Add_course

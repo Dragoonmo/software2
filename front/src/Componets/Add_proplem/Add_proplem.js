@@ -8,7 +8,7 @@ const Add_proplem = (props) => {
 
     const [Name, setName] = useState('')
     const [Text, setText] = useState('')
-    const [Type, setType] = useState('')
+    // const [Type, setType] = useState('')
 
 
 
@@ -16,7 +16,7 @@ const Add_proplem = (props) => {
     const handleSubmit = async (e) => {
 
         e.preventDefault()
-        axios.post('http://localhost:3001/problim/add_problim', { Name , Text , Type})
+        axios.post('http://localhost:3001/problim/add_problim', { Name , Text})
             .then(res => {
                 if (res.data.valid) {
                     alert("Published successfully")
@@ -36,7 +36,7 @@ const Add_proplem = (props) => {
                 <h2 className="heading">Do you have a problem ?</h2>
 
                 <form onSubmit={handleSubmit}>
-                    <div className="t1">
+                    {/* <div className="t1">
                         
                         <select style={{
                             "height": "30px", "width": "20%", "outline": "none",
@@ -50,7 +50,7 @@ const Add_proplem = (props) => {
                                 <option value={"reptile"}>reptile</option>
 
                         </select>
-                    </div>
+                    </div> */}
 
                     <textarea onChange={e => setName(e.target.value)} style={{
                         "height": "40px", "width": "30%", "outline": "none",

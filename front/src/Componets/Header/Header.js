@@ -6,7 +6,7 @@ const Header = (props) => {
     <>
       <header className="header">
 
-        <a href="#" className="logo"> <i className="fas fa-paw"></i> PetCare</a>
+        <a href="#" className="logo">  Educational platform</a>
 
         <nav className="navbar">
           <a href={props.href1}>{props.a1}</a>

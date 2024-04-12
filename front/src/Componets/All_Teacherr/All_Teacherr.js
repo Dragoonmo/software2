@@ -1,4 +1,4 @@
-import './All_doc.css'
+import './All_Teacherr.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEnvelope, faUserDoctor } from '@fortawesome/free-solid-svg-icons'
 import { faBell } from '@fortawesome/free-regular-svg-icons'
@@ -6,7 +6,7 @@ import { useEffect } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import axios from 'axios'
 
-const All_doc = (props) => {
+const All_Teacherr = (props) => {
     const navigate = useNavigate()
 
     // const sendRequst = async (id) => {
@@ -36,4 +36,4 @@ const All_doc = (props) => {
     )
 }
 
-export default All_doc
+export default All_Teacherr

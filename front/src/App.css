@@ -1,45 +1,39 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
 
-:root {
+:root{
   --main: #ff6e01;
+  /* --main: #fecc02; */
+
   --bg: #f1e1d2;
   --black: #000;
-  --white: #fff;
+  --white: #ffff;
   --box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.1);
-  min-height: 100%;
-  display: flex;
-  flex-direction: column;
 }
-
-html {
+html{
   font-size: 62.5%;
   overflow-x: hidden;
   scroll-behavior: smooth;
   scroll-padding-top: 4rem;
-  height: 100%;
-  margin: 0;
-  padding: 0;
 }
 
-
-html::-webkit-scrollbar {
+html::-webkit-scrollbar{
   width: 1rem;
 }
 
-html::-webkit-scrollbar-track {
+html::-webkit-scrollbar-track{
   background: transparent;
 }
 
-html::-webkit-scrollbar-thumb {
+html::-webkit-scrollbar-thumb{
   background: var(--main);
   border-radius: 5rem;
 }
 
-section {
+section{
   padding: 8rem 7%;
 }
 
-.heading {
+.heading{
   text-align: center;
   font-size: 4rem;
   color: var(--main);
@@ -48,7 +42,7 @@ section {
   padding: 1.2rem 0;
 }
 
-.btn {
+.btn{
   font-size: 1.7rem;
   display: inline-block;
   background: var(--main);
@@ -62,7 +56,7 @@ section {
   overflow: hidden;
 }
 
-.btn::before {
+.btn::before{
   content: '';
   position: absolute;
   top: 0;
@@ -74,39 +68,37 @@ section {
   left: 0;
 }
 
-.btn:hover::before {
+.btn:hover::before{
   width: 100%;
 }
 
-* {
+*{
   font-family: 'Roboto', sans-serif;
-  margin: 0;
-  padding: 0;
+  margin: 0; padding: 0;
   box-sizing: border-box;
-  outline: none;
-  border: none;
+  outline: none; border: none;
   text-decoration: none;
   text-transform: capitalize;
   transition: .2s linear;
 }
 
-.contact {
+.contact{
   background: var(--bg);
 }
 
-.contact form {
+.contact form{
   padding: 2rem 10%;
   text-align: center;
 }
 
-.contact form .inputBox {
+.contact form .inputBox{
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
 
 .contact form .inputBox input,
-.contact form textarea {
+.contact form textarea{
   font-size: 1.7rem;
   width: 49%;
   padding: 1rem 2rem;
@@ -116,11 +108,11 @@ section {
 }
 
 .contact form .inputBox input::placeholder,
-.contact form textarea::placeholder {
+.contact form textarea::placeholder{
   text-transform: capitalize;
 }
 
-.contact form textarea {
+.contact form textarea{
   height: 15rem;
   resize: none;
   width: 100%;

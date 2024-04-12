@@ -6,7 +6,7 @@ const Common_proplem = (props) => {
 
 
             <div className="box">
-                <h2 style={{ "font-size": "24px" }}>{props.type}</h2>
+                <h2 style={{ "font-size": "24px" }}>{""}</h2>
                 <br />
                 <h2>{props.name}</h2>
                 <br />

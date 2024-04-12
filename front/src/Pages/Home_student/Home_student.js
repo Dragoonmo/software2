@@ -1,13 +1,13 @@
 import { useEffect, useState } from 'react'
 import { Card, Bunner, Problems, Header, SectionHeader, Animal_info, Button, Add_proplem } from '../../Componets/index'
-import './Home_owner.css'
+import './Home_student.css'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
 import animal_image from '../../Assert/Images/—Pngtree—parrot_1001948.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlus, faRightFromBracket, faBell, faHouse ,faMessage ,faUserDoctor,faStethoscope} from '@fortawesome/free-solid-svg-icons'
 
-const Home_owner = () => {
+const Home_student = () => {
   const [name, setName] = useState('')
   const [Animall_info, setAnimal_info] = useState([])
   const [Problim_info, setProblim_info] = useState([])
@@ -39,12 +39,12 @@ const Home_owner = () => {
   return (
     <>
 
-      <Header href1={"/Adopt"} a1={"Adopt"} href2={"/common_users"} a2={"FAQs"} href5={"/Add_Animal"} a5={<FontAwesomeIcon icon={faPlus} />} href6={"all_doc"} a6={<FontAwesomeIcon icon={faStethoscope} />} href3={"/Animal_infoo"} a3={"My Animals"} href4={"/All_problem"} a4={"Forum"} href7={"/chat"} a7={<FontAwesomeIcon icon={faMessage} />} href8={"/Notifications"} a8={<FontAwesomeIcon icon={faBell} />} href9={"/profile"} a9={<div id="login-btn" className="fas fa-user"></div>} href10={"/"} a10={<FontAwesomeIcon icon={faHouse} />} log={'/#'} log2={<div id="login-btn"><FontAwesomeIcon icon={faRightFromBracket} /></div>} />
+      <Header href1={"/Adopt"} a1={""} href2={"/common_users"} a2={"FAQs"} href5={"/Add_course"} a5={<FontAwesomeIcon icon={faPlus} />} href6={"all_teacher"} a6={"All Teacher"} href3={"/Animal_infoo"} a3={"My Course"} href4={"/All_problem"} a4={"Forum"} href7={"/chat"} a7={<FontAwesomeIcon icon={faMessage} />} href8={"/Notifications"} a8={<FontAwesomeIcon icon={faBell} />} href9={"/profile"} a9={<div id="login-btn" className="fas fa-user"></div>} href10={"/"} a10={<FontAwesomeIcon icon={faHouse} />} log={'/#'} log2={<div id="login-btn"><FontAwesomeIcon icon={faRightFromBracket} /></div>} />
 
-      <section className="bbanner" style={{ "margin-top": "2200px","margin-left":"200px" }}>
+      <section className="bbanner" style={{ "margin-top": "50px","margin-left":"-400px" }}>
         <div className="row">
           <div style={{ "margin-top": "170px","margin-left":"260px" }} className="content">
-            <h3 style={{"fontSize":"30px" }}>{"Welcome   " + name}</h3>
+            <h3 style={{"fontSize":"30px","color":"black" }}>{"Welcome   " + name}</h3>
             <br />
             <br />
             <br />
@@ -52,7 +52,7 @@ const Home_owner = () => {
             <br />
             <div className='nav'>
 
-            <h3 style={{ "margin-left": "10px","fontSize":"28px" }}>     your advice</h3>
+            <h3 style={{ "margin-left": "10px","fontSize":"28px","color":"black" }}>     your advice</h3>
 
               {Advice.map((user, i) => {
                 return (
@@ -76,7 +76,7 @@ const Home_owner = () => {
 
 
       <section className="animal" id="animal" >
-        <SectionHeader>Your Animals</SectionHeader>
+        <SectionHeader>Your Course</SectionHeader>
         <div className="">
           <div className="heading">
           </div>
@@ -90,6 +90,8 @@ const Home_owner = () => {
               </div>
             )
           })}
+                          <Card image={animal_image} name={"user.name"} href_link={`Animal_info_id/${5}`} link={"see details"} id={5} />
+
         </div>
       </section>
 
@@ -102,7 +104,7 @@ const Home_owner = () => {
           {Problim_info.map((user, i) => {
             return (
               <div key={i}>
-                <Problems name={user.title} text={user.disc} type={user.animal_type} hreflink={`Problem_id/${user.id}`} id1={user.id}  />
+                <Problems name={user.title} text={user.disc} hreflink={`Problem_id/${user.id}`} id1={user.id}  />
               </div>
             )
           })}
@@ -113,4 +115,4 @@ const Home_owner = () => {
   )
 }
 
-export default Home_owner
+export default Home_student

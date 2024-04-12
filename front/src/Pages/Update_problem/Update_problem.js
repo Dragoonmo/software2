@@ -29,7 +29,7 @@ const Update_problem = () => {
     const handleSubmit = async (e) => {
         e.preventDefault()
 
-        axios.post(`http://localhost:3001/problim/update_problem/${id}`, { Name, Details, Type })
+        axios.post(`http://localhost:3001/problim/update_problem/${id}`, { Name, Details })
             .then(res => {
                 if (res.data.valid) {
                     navigate('/my_problem')
@@ -54,10 +54,10 @@ const Update_problem = () => {
                             <div class="user-details">
                                 <div class="input-box">
                                     <span class="details">title propblem </span>
-                                    <input style={{ "width": "140%" }} type="text" value={Name} onChange={e => setName(e.target.value)} />
+                                    <input style={{ "width": "220%" }} type="text" value={Name} onChange={e => setName(e.target.value)} />
                                 </div>
                                 <div class="input-box">
-                                    <span class="details" style={{ "margin-left": "95px" }}>type </span>
+                                    {/* <span class="details" style={{ "margin-left": "95px" }}>type </span>
                                     <select value={Type} style={{
                                         "height": "30px", "width": "60%", "outline": "none",
                                         "font-size": "13px", "border-radius": "5px", "padding-left": "15px", "margin-left": "95px",
@@ -69,7 +69,7 @@ const Update_problem = () => {
                                         <option value={"birds"}>Birds</option>
                                         <option value={"reptile"}>reptile</option>
 
-                                    </select>
+                                    </select> */}
                                 </div>
                                 <div class="input-box">
                                     <span class="details">details</span>
