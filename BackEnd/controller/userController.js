@@ -2,7 +2,6 @@ const { json }=require("body-parser");
 const models=require("../models");
 const bcryptjs=require("bcryptjs");
 const db=require("../dbb/db")
-//
 const singup_teacher=(req,res) => {
     models.user_info.findOne({ where: { email: req.body.email } }).then((result) => {
             if (result) {
@@ -206,22 +205,13 @@ const home_owner=(req,res) => {
 const tips =(courss)=>{
 var sqll='delete from tip_gen' 
 db.query(sqll,(err,result)=>{
-    courss.map((u,i)=>{//here we sshow th num of day for evre vacc rim
-        var sql='select * from tip where cours_typee=?'
-        // console.log(u.type)
-        // var dad=new Date(u.age)
-        // var d=new Date()
-        // var datee = d.getFullYear()+'-'+(d.getMonth()+1)+'-'+d.getDate();
-        // var ddss= new Date(datee)
-        // var Difference_In_Time = ddss.getTime() - dad.getTime();
-        // var Difference_In_Days = Difference_In_Time / (1000 * 3600 * 24);
-        // var mon=Difference_In_Days/30
-        // var mm=parseInt(mon)
+    courss.map((u,i)=>{
+        var sql='select * from tip'
         db.query(sql,[u.type],(err,result)=>{
             if (err) console.log(err)
             result.map((uu,i)=>{
                 
-                    var f="the tip for day is " + uu.tip +" for the cours  " + u.name
+                    var f="the tip for day is " + uu.tip 
                     var sql= "INSERT tip_gen (gen_tip) VALUES('" + f + "')"
                     db.query(sql,(err,result)=>{
                         if(err)console.log(err)

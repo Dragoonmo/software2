@@ -20,11 +20,10 @@ const Add_coursee = () => {
 
     formData.append('name', Name)
     formData.append('Years', Years)
-
     formData.append('details', Additional_details)
     e.preventDefault()
 
-    axios.post('http://localhost:3001/animal/add-animal', formData)
+    axios.post('http://localhost:3001/animal/add-animal', {Name,Years,Additional_details})
       .then(res => {
         if (res.data.valid) {
           navigate('/')
@@ -41,11 +40,11 @@ const Add_coursee = () => {
         <div class="user-details">
           <div class="input-box">
             <span class="details">name of the Course *</span>
-            <input type="text" name='name' required onChange={e => setName(e.target.value)} />
+            <input type="text" required onChange={e => setName(e.target.value)} />
           </div>
           <div class="input-box">
             <span class="details">years </span>
-            <select name="type" idd="animal" required onChange={e => setYears(e.target.value)}>
+            <select   required onChange={e => setYears(e.target.value)}>
               <option value={"1"} >1</option>
               <option value={"2"} >2</option>
               <option value={"3"} >3</option>
@@ -58,7 +57,7 @@ const Add_coursee = () => {
 
           <div class="input-box">
             <span class="details">Additional details </span>
-            <input type="text" name='details' onChange={e => setAdditional_details(e.target.value)} />
+            <input type="text"  onChange={e => setAdditional_details(e.target.value)} />
           </div>
         </div>
         <div class="button">
