@@ -36,7 +36,7 @@ const Requests = (props) => {
       <div class="card">
         <div class="icons">
           
-          <FontAwesomeIcon icon={faPaw} />
+          {/* <FontAwesomeIcon icon={faPaw} /> */}
         </div>
         <div class="info">
           <h3>{props.title}</h3>

@@ -58,7 +58,7 @@ const Register_veterinarian = () => {
   }
   return (
     <>
-      <Header href1={"/Animal"} a1={"About Pets"} href3={"#"} a3={"FAQs"} log={'/login'} log2={<div id="login-btn"><FontAwesomeIcon icon={faRightToBracket} /></div>} />
+      <Header href1={"/#"} a1={""} href3={"#"} a3={""} log={'/login'} log2={<div id="login-btn"><FontAwesomeIcon icon={faRightToBracket} /></div>} />
 
       <div style={{ "margin-top": "600px", "margin-bottom": "70px" }}>
         <div className="container" >

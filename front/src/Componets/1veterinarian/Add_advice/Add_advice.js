@@ -9,16 +9,13 @@ const Add_advice = () => {
     const navigate = useNavigate()
 
     const [Tip, setTip] = useState('')
-    const [Type, setType] = useState('')
-    const [Minage, setMinage] = useState('')
-    const [Maxage, setMaxage] = useState('')
 
     axios.defaults.withCredentials = true
     const handleSubmit = async (e) => {
 
         e.preventDefault()
 
-        axios.post('http://localhost:3001/vet/Add_advice', { Tip, Type, Minage, Maxage })
+        axios.post('http://localhost:3001/vet/Add_advice', { Tip })
             .then(res => {
                 if (res.data.valid) {
                     alert('The Advice was added successfully')
@@ -34,27 +31,9 @@ const Add_advice = () => {
         <>
             <form action="#" onSubmit={handleSubmit} enctype="multipart/form-data">
                 <div class="user-details">
-                    <div class="input-box">
+                    <div class="input-box"style={{ "width": "500px" }}>
                         <span class="details">Tip *</span>
                         <input type="text" required onChange={e => setTip(e.target.value)} />
-                    </div>
-                    <div class="input-box">
-                        <span class="details">Min Age *</span>
-                        <input type="number" placeholder='num month'  required onChange={e => setMinage(e.target.value)} />
-                    </div>
-                    <div class="input-box">
-                        <span class="details">Max Age *</span>
-                        <input type="number" placeholder='num month'  required onChange={e => setMaxage(e.target.value)} />
-                    </div>
-
-                    <div class="input-box">
-                        <span class="details">type </span>
-                        <select name="type" idd="animal" required onChange={e => setType(e.target.value)}>
-                            <option value={"cat"} >Cat</option>
-                            <option value={"dog"} >Dog</option>
-                            <option value={"bird"} >Bird</option>
-                            <option value={"reptile"} >Reptile</option>
-                        </select>
                     </div>
 
                 </div>

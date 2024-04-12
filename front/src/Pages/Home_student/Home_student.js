@@ -39,7 +39,7 @@ const Home_student = () => {
   return (
     <>
 
-      <Header href1={"/Adopt"} a1={""} href2={"/common_users"} a2={"FAQs"} href5={"/Add_course"} a5={<FontAwesomeIcon icon={faPlus} />} href6={"all_teacher"} a6={"All Teacher"} href3={"/Animal_infoo"} a3={"My Course"} href4={"/All_problem"} a4={"Forum"} href7={"/chat"} a7={<FontAwesomeIcon icon={faMessage} />} href8={"/Notifications"} a8={<FontAwesomeIcon icon={faBell} />} href9={"/profile"} a9={<div id="login-btn" className="fas fa-user"></div>} href10={"/"} a10={<FontAwesomeIcon icon={faHouse} />} log={'/#'} log2={<div id="login-btn"><FontAwesomeIcon icon={faRightFromBracket} /></div>} />
+      <Header href1={"/#"} a1={""} href2={"/common_users"} a2={"FAQs"} href5={"/Add_course"} a5={<FontAwesomeIcon icon={faPlus} />} href6={"all_teacher"} a6={"All Teacher"} href3={"/Animal_infoo"} a3={"My Course"} href4={"/All_problem"} a4={"Forum"} href7={"/chat"} a7={<FontAwesomeIcon icon={faMessage} />} href8={"/#"} a8={""} href9={"/profile"} a9={<div id="login-btn" className="fas fa-user"></div>} href10={"/"} a10={<FontAwesomeIcon icon={faHouse} />} log={'/#'} log2={<div id="login-btn"><FontAwesomeIcon icon={faRightFromBracket} /></div>} />
 
       <section className="bbanner" style={{ "margin-top": "50px","margin-left":"-400px" }}>
         <div className="row">
@@ -66,7 +66,6 @@ const Home_student = () => {
               })}
               
             </div>
-            <p style={{ "color": "black" }}>{Isnotefi}</p>
           </div>
           <div style={{ "padding-right": "60px" }}  className="image">
             {/* <img src={animal_image} alt="" /> */}

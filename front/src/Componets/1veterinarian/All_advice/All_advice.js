@@ -11,21 +11,9 @@ const All_advice = (props) => {
                 <div class="content">
                     <form action="#" >
                         <div class="user-details">
-                            <div class="input-box">
+                            <div class="input-box" style={{ "width": "500px"}}>
                                 <span class="details">Tip</span>
                                 <p>{props.tip}</p>
-                            </div>
-                            <div class="input-box">
-                                <span class="details">Type Animal</span>
-                                <p>{props.type}</p>
-                            </div>
-                            <div class="input-box">
-                                <span class="details">Max Age(month)</span>
-                                <p>{props.max}</p>
-                            </div>
-                            <div class="input-box">
-                                <span class="details">Min Age(month)</span>
-                                <p>{props.min}</p>
                             </div>
                         </div>
                     </form>

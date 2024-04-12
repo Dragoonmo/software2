@@ -21,7 +21,7 @@ const All_Teacherr = (props) => {
         <>
             <div class="card" style={{ "width": "250px", "height": "300px" }}>
                 <div class="icons">
-                    <FontAwesomeIcon icon={faUserDoctor} />
+                    {/* <FontAwesomeIcon icon={faUserDoctor} /> */}
                 </div>
                 <div class="info">
                     <h3 style={{ "color": "black" }}>{props.name}</h3>

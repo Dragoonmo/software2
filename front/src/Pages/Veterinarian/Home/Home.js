@@ -39,12 +39,12 @@ const Home = () => {
     return (
         <>
 
-            <Header href1={"/Adopt_vet"} a1={"Adopt"} href2={"/common_vete"} a2={"FAQs"} href5={"/requst"} a5={<FontAwesomeIcon icon={faLink} />} href6={"all_advice"} a6={<FontAwesomeIcon icon={faNotesMedical} />} href7={"all_vaccine"} a7={<FontAwesomeIcon icon={faSyringe} />} href3={"all_follow"} a3={"All Follow"} href4={"/Forum_vet"} a4={"Forum"} href8={"/chat_vet"} a8={<FontAwesomeIcon icon={faMessage} />} href9={"/Notifications_vet"} a9={<FontAwesomeIcon icon={faBell} />} href10={"profile_vet"} a10={<div id="login-btn" className="fas fa-user"></div>} href11={"Home_vet"} a11={<FontAwesomeIcon icon={faHouse} />} log={'/#'} log2={<div id="login-btn"><FontAwesomeIcon icon={faRightFromBracket} /></div>} />
+            <Header href1={"/#"} a1={""} href2={"/common_vete"} a2={"FAQs"} href5={"/requst"} a5={<FontAwesomeIcon icon={faLink} />} href6={"all_advice"} a6={<FontAwesomeIcon icon={faNotesMedical} />} href7={"#"} a7={""} href3={"all_follow"} a3={"All Follow"} href4={"/Forum_vet"} a4={"Forum"} href8={"/chat_vet"} a8={<FontAwesomeIcon icon={faMessage} />} href9={"/#"} a9={""} href10={"profile_vet"} a10={<div id="login-btn" className="fas fa-user"></div>} href11={"Home_vet"} a11={<FontAwesomeIcon icon={faHouse} />} log={'/#'} log2={<div id="login-btn"><FontAwesomeIcon icon={faRightFromBracket} /></div>} />
 
-            <section className="bbanner" style={{ "margin-top": "2000px" }}>
+            <section className="bbanner" style={{ "margin-top": "00px" }}>
                 <div className="row">
                     <div style={{ "margin-top": "170px","margin-left":"260px" }} className="content">
-                        <h3>{"Welcome   " + name}</h3>
+                        <h3 style={{"color":"white" }}>{"Welcome   " + name}</h3>
                         <br />
                         <br />
                         <br />
@@ -52,11 +52,11 @@ const Home = () => {
                         <br />
                         <div className='nav'>
 
-                            <h3 style={{ "margin-left": "10px" }}>     New events</h3>
+                            <h3 style={{ "margin-left": "10px","color":"white" }}>     New events</h3>
 
                             {Events.map((user, i) => {
                                 return (
-                                    <div key={i}>
+                                    <div style={{"color":"white" }} key={i}>
                                         <Bunner p1={user.one}
                                             p2={user.disc}
                                         // p3={user.gen_tip} 
@@ -66,7 +66,6 @@ const Home = () => {
                             })}
 
                         </div>
-                        <p style={{ "color": "red" }}>{Isnotefi}</p>
                     </div>
                     <div className="image">
                         {/* <img src={animal_image} alt="" /> */}
