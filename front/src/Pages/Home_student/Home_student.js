@@ -39,9 +39,9 @@ const Home_student = () => {
   return (
     <>
 
-      <Header href1={"/#"} a1={""} href2={"/common_users"} a2={"FAQs"} href5={"/Add_course"} a5={<FontAwesomeIcon icon={faPlus} />} href6={"all_teacher"} a6={"All Teacher"} href3={"/Animal_infoo"} a3={"My Course"} href4={"/All_problem"} a4={"Forum"} href7={"/chat"} a7={<FontAwesomeIcon icon={faMessage} />} href8={"/#"} a8={""} href9={"/profile"} a9={<div id="login-btn" className="fas fa-user"></div>} href10={"/"} a10={<FontAwesomeIcon icon={faHouse} />} log={'/#'} log2={<div id="login-btn"><FontAwesomeIcon icon={faRightFromBracket} /></div>} />
+      <Header href1={"/#"} a1={""} href2={"/common_users"} a2={"FAQs"} href5={"/Add_course"} a5={<FontAwesomeIcon icon={faPlus} />} href6={"all_teacher"} a6={"All Teacher"} href3={"/Course_infoo"} a3={"My Course"} href4={"/All_problem"} a4={"Forum"} href7={"/chat"} a7={<FontAwesomeIcon icon={faMessage} />} href8={"/#"} a8={""} href9={"/profile"} a9={<div id="login-btn" className="fas fa-user"></div>} href10={"/"} a10={<FontAwesomeIcon icon={faHouse} />} log={'/#'} log2={<div id="login-btn"><FontAwesomeIcon icon={faRightFromBracket} /></div>} />
 
-      <section className="bbanner" style={{ "margin-top": "50px","margin-left":"-400px" }}>
+      <section className="bbanner" style={{ "margin-top": "50px","margin-left":"00px" }}>
         <div className="row">
           <div style={{ "margin-top": "170px","margin-left":"260px" }} className="content">
             <h3 style={{"fontSize":"30px","color":"black" }}>{"Welcome   " + name}</h3>
@@ -85,11 +85,11 @@ const Home_student = () => {
           {Animall_info.map((user, i) => {
             return (
               <div key={i}>
-                <Card image={'http://localhost:3001/uploads/' + user.urlImage} name={user.name} href_link={`Animal_info_id/${user.id}`} link={"see details"} id={user.id} />
+                <Card image={'http://localhost:3001/uploads/' + user.urlImage} name={user.name} href_link={`Course_info_id/${user.id}`} link={"see details"} id={user.id} />
               </div>
             )
           })}
-                          <Card image={animal_image} name={"user.name"} href_link={`Animal_info_id/${5}`} link={"see details"} id={5} />
+                          {/* <Card image={animal_image} name={"user.name"} href_link={`Course_info_id/${5}`} link={"see details"} id={5} /> */}
 
         </div>
       </section>

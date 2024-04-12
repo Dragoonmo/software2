@@ -1,4 +1,4 @@
-import './Search_vet.css'
+import './Search_teacher.css'
 import { Header, Profilee } from '../../../Componets/index'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlus, faRightFromBracket, faBell, faHouse } from '@fortawesome/free-solid-svg-icons'
@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import axios from 'axios'
 
-const Search_vet = () => {
+const Search_teacher = () => {
     const navigate = useNavigate()
     const [Type, setType] = useState('')
 
@@ -41,4 +41,4 @@ const Search_vet = () => {
     )
 }
 
-export default Search_vet
+export default Search_teacher

@@ -1,4 +1,4 @@
-import './Your_animall.css'
+import './Your_Course.css'
 import { Card, SectionHeader ,Header} from '../../../Componets/index'
 import { useEffect, useState } from 'react'
 import axios from 'axios'
@@ -6,7 +6,7 @@ import { useNavigate, useParams } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlus, faRightFromBracket, faBell, faHouse } from '@fortawesome/free-solid-svg-icons'
 import c from '../../../Assert/Images/course.jpg'
-const Your_animall = () => {
+const Your_Course = () => {
 
     const [Animall_info, setAnimal_info] = useState([])
     const { id } = useParams()
@@ -67,4 +67,4 @@ const Your_animall = () => {
     )
 }
 
-export default Your_animall
+export default Your_Course

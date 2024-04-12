@@ -1,9 +1,9 @@
-import './About_your_animal.css'
+import './About_your_course.css'
 import axios from 'axios'
 import { Link, useNavigate } from 'react-router-dom'
 import { useEffect } from 'react'
 
-const About_your_animal = (props) => {
+const About_your_course = (props) => {
 
     const navigate = useNavigate()
 
@@ -50,4 +50,4 @@ const About_your_animal = (props) => {
     )
 }
 
-export default About_your_animal
+export default About_your_course

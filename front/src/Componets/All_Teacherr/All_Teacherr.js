@@ -28,8 +28,7 @@ const All_Teacherr = (props) => {
                 </div>
                 <br />
                 <div>
-                    <Link style={{ "margin-left": "40px", "width": "125px" }} className="btn" to={`/show_animal_requst/${props.id}`}>request</Link>
-                    <Link style={{ "margin-left": "48px", "width": "110px" }} className="btn" to={`/profile_id_vet/${props.id}`}>Profile</Link>
+                    <Link style={{ "margin-left": "40px", "width": "125px","margin-top":"100px" }} className="btn" to={`/show_course_requst/${props.id}`}>request</Link>
                 </div>
             </div>
         </>

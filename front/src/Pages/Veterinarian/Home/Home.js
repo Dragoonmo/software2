@@ -39,7 +39,7 @@ const Home = () => {
     return (
         <>
 
-            <Header href1={"/#"} a1={""} href2={"/common_vete"} a2={"FAQs"} href5={"/requst"} a5={<FontAwesomeIcon icon={faLink} />} href6={"all_advice"} a6={<FontAwesomeIcon icon={faNotesMedical} />} href7={"#"} a7={""} href3={"all_follow"} a3={"All Follow"} href4={"/Forum_vet"} a4={"Forum"} href8={"/chat_vet"} a8={<FontAwesomeIcon icon={faMessage} />} href9={"/#"} a9={""} href10={"profile_vet"} a10={<div id="login-btn" className="fas fa-user"></div>} href11={"Home_vet"} a11={<FontAwesomeIcon icon={faHouse} />} log={'/#'} log2={<div id="login-btn"><FontAwesomeIcon icon={faRightFromBracket} /></div>} />
+            <Header href1={"/#"} a1={""} href2={"/common_vete"} a2={"FAQs"} href5={"/requst"} a5={<FontAwesomeIcon icon={faLink} />} href6={"all_advice"} a6={<FontAwesomeIcon icon={faNotesMedical} />} href7={"#"} a7={""} href3={"all_follow"} a3={"All Follow"} href4={"/Forum_vet"} a4={"Forum"} href8={"/chat_vet"} a8={<FontAwesomeIcon icon={faMessage} />} href9={"/#"} a9={""} href10={"#"} a10={""} href11={"Home_vet"} a11={<FontAwesomeIcon icon={faHouse} />} log={'/#'} log2={<div id="login-btn"><FontAwesomeIcon icon={faRightFromBracket} /></div>} />
 
             <section className="bbanner" style={{ "margin-top": "00px" }}>
                 <div className="row">
@@ -85,7 +85,7 @@ const Home = () => {
                     {Animall_info.map((user, i) => {
                         return (
                             <div key={i}>
-                                <Card image={'http://localhost:3001/uploads/' + user.urlImage} name={user.name} href_link={`Animal_info_id_follow/${user.id}`} link={"see details"} id={user.id} />
+                                <Card image={'http://localhost:3001/uploads/' + user.urlImage} name={user.name} href_link={`Course_follow_id/${user.id}`} link={"see details"} id={user.id} />
                             </div>
                         )
                     })}
