@@ -82,7 +82,7 @@ else return res.json({valid:false})
 function search_user (req,res){
     if(req.session.username){
     var type=req.params.Type
-    sql='select * from user_infos where email IN (select owner from animals  where type=? AND owner!=? AND owner not in(select reciver from chats where Sender=?))'
+    sql='select * from user_infos where email IN (select owner from courses  where type=? AND owner!=? AND owner not in(select reciver from chats where Sender=?))'
     db.query(sql,[type,req.session.username,req.session.username],(err,result)=>{
         if(err) console.log(err)
         console.log(result)
@@ -98,7 +98,7 @@ function show_pofile(req,res){
         sql='select * from user_infos where email=?'
             db.query(sqlll,[req.params.id],(err,ress)=>{
                 db.query(sql,[ress[0].reciver],(error,result)=>{
-                    sqll='select DISTINCT type from animals where owner=?'
+                    sqll='select DISTINCT type from courses where owner=?'
                     db.query(sqll,[result[0].email],(errr,results)=>{
                         res.json({result,valid:true,results})
                     })
@@ -132,4 +132,3 @@ show_pofile:show_pofile,
 search_vet:search_vet
 }
 
-// db.query("select * from user_infos join animals on animals.owner=user_infos.email where animals.type="+mysql.escape(type) +")"

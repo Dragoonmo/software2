@@ -296,7 +296,7 @@ function add_vac_info(req,res){
     else{return res.json({ valid:false})}
 }
 function show_all__req(req,res) {
-    const sql='SELECT * from animals WHERE animals.owner=? AND id not in  (select animal_id_f from follow_t ) '
+    const sql='SELECT * from animals WHERE animals.owner=? AND id not in  (select courss_id_f from follow_t ) '
     db.query(sql,[req.session.username], (err, result) => {
         if (err) return res.json(err)
         return res.json({result,valid:true})
