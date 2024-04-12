@@ -17,9 +17,9 @@ function add_common_problem(req,res){
         else if(result[0].rolee=='doc'){
             var title=req.body.Title
             var desc=req.body.Details
-            var animal_type=req.body.Type
+            var cours_type=req.body.Type
             var pub=req.session.username
-            var sql="INSERT common_problems (title,disc,animal_type,publisher) VALUES('" + title + "','" + desc + "','" + animal_type + "','" + pub + "')"
+            var sql="INSERT common_problems (title,disc,cours_type,publisher) VALUES('" + title + "','" + desc + "','" + cours_type + "','" + pub + "')"
             db.query(sql,(error,result)=>{
                 if(error) {
                     console.log(error)
@@ -42,7 +42,7 @@ else {
 function search(req,res){
     if(req.session.username){
         type=req.body.Type
-    sql='select * from common_problems where animal_type=?'
+    sql='select * from common_problems where cours_type=?'
     db.query(sql,[type],(error,result)=>{
         if(error){
             console.log(error)

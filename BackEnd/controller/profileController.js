@@ -46,17 +46,6 @@ function edit_info(req,res){
         if(error)console.log(error)
         res.json({result,valid:true})
     })
-
-    // var ps=req.body.Password
-        // bcryptjs.genSalt(10,(err,salt) => {
-        // bcryptjs.hash(req.body.password,salt,function (err,hash) {
-        //     var password=hash
-        //     bcryptjs.hash(ps,salt,function (err,hash) {
-                
-        //     })
-        
-        // });
-        // });
     
 }
 

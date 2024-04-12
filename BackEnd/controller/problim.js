@@ -47,10 +47,10 @@ const add_problim=(req,res) => {
     var publisher=req.session.username
     var title=req.body.Name
     var desc=req.body.Text
-    var animal_type=req.body.Type
+    var courss_type=req.body.Type
     const d = new Date();
     var date = d.getFullYear()+'-'+(d.getMonth()+1)+'-'+d.getDate();   
-    var sql= "insert into problims (title,disc,publisher,animal_type,date_prob) values ('" + title + "','" + desc + "','" + publisher + "','" + animal_type + "','" + date + "')"
+    var sql= "insert into problims (title,disc,publisher,courss_type,date_prob) values ('" + title + "','" + desc + "','" + publisher + "','" + courss_type + "','" + date + "')"
     db.query(sql,(err, result) => {
         if (err) return res.json(err)+console.log(err)
         return res.json({result,valid:true}) + console.log()
@@ -91,9 +91,9 @@ const update_problem=(req,res)=>{
 var id=req.params.id
 var title=req.body.Name
 var desc=req.body.Details
-var animal_type=req.body.Type
-sqll='update problims set title=?,disc=?,animal_type=? where id=?'
-db.query(sqll,[title,desc,animal_type,id],(err,result)=>{
+var courss_type=req.body.Type
+sqll='update problims set title=?,disc=?,courss_type=? where id=?'
+db.query(sqll,[title,desc,courss_type,id],(err,result)=>{
     if (err) console.log(err+"the err in update function")
     return res.json({result,valid:true})
 
