@@ -45,7 +45,7 @@ const Adopt = (props) => {
                     </p>
                     <a href={props.details} className="btn">See Details</a>
                     <br />
-                    <a href={props.href} className="btn"> <button style={{ "color": "white", "background": "none", "fontSize": "17.5px" }} onClick={e => handleRequistAdopt(props.id)} >adoption</button></a>
+                    <a href={props.href} className="btn"> <button style={{ "color": "white", "background": "none", "fontSize": "17.5px" }} onClick={e => handleRequistAdopt(props.id)} >Follow</button></a>
                 </div>
             </div>
 

@@ -78,7 +78,7 @@ const Profilee_id = (props) => {
                         </div>
 
                     </div>
-                    <div className="skils">
+                    {/* <div className="skils">
 
                         <h2 className="title2">Type Animals</h2>
 
@@ -90,7 +90,7 @@ const Profilee_id = (props) => {
                                 <h4>{props.animals}</h4>
                             </div>
                         </div>
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </>

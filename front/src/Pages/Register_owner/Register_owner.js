@@ -44,7 +44,7 @@ const Register_owner = () => {
             <Header href1={"/Animal"} a1={"About Pets"} href3={"#"} a3={"FAQs"} log={'/login'} log2={<div id="login-btn"><FontAwesomeIcon icon={faRightToBracket} /></div>} />
 
             <div className="container">
-                <div className="title">Registration Owner</div>
+                <div className="title">Registration Student</div>
                 <div className="content">
                     <form onSubmit={handleSubmit}>
                         <div className="user-details">

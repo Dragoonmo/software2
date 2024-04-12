@@ -5,6 +5,7 @@ import axios from 'axios'
 import { useNavigate, useParams } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlus, faRightFromBracket, faBell, faHouse } from '@fortawesome/free-solid-svg-icons'
+import c from '../../../Assert/Images/course.jpg'
 const Your_animall = () => {
 
     const [Animall_info, setAnimal_info] = useState([])
@@ -39,7 +40,7 @@ const Your_animall = () => {
         <Header href1={"/Adopt"} a1={"Adopt"} href2={"/common_users"} a2={"FAQs"} href5={"/Add_Animal"} a5={<FontAwesomeIcon icon={faPlus} />} href3={"/Animal_infoo"} a3={"All Animal"} href4={"/All_problem"} a4={"Ploblems"} href6={"/Notifications"} a6={<FontAwesomeIcon icon={faBell} />} href7={"/profile"} a7={<div id="login-btn" className="fas fa-user"></div>} href8={"/"} a8={<FontAwesomeIcon icon={faHouse} />} log={'/#'} log2={<div id="login-btn"><FontAwesomeIcon icon={faRightFromBracket} /></div>} />
 
             <section className="animal" id="animal">
-                <SectionHeader>Chose from your animal </SectionHeader>
+                <SectionHeader>Chose from your Course </SectionHeader>
                 <div className="">
                     <div className="heading">
                     </div>
@@ -50,7 +51,7 @@ const Your_animall = () => {
                             <div key={i}>
                                 <div className="box-container">
                                     <div className="box">
-                                        <img src={'http://localhost:3001/uploads/' + user.urlImage} alt="You don't have any animals" />
+                                        <img src={c} alt="You don't have any course" />
                                         <div className="content">
                                             <h3>{user.name}</h3>
                                             <button onClick={e => AddRequst(user.id)} className='btn'>Select</button>

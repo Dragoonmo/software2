@@ -62,7 +62,7 @@ const Register_veterinarian = () => {
 
       <div style={{ "margin-top": "600px", "margin-bottom": "70px" }}>
         <div className="container" >
-          <div className="title">Registration Veterinarian</div>
+          <div className="title">Registration Teachers</div>
           <div className="content">
             <form action="#" onSubmit={handleSubmit} enctype="multipart/form-data">
               <div className="user-details">

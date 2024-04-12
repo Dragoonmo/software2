@@ -23,18 +23,12 @@ const Search_user = () => {
 
             <div class="container">
                 <div class="title">Search</div>
-                <div class="content"  style={{ "width": "300px" }}>
+                <div class="content" style={{ "width": "300px" }}>
                     <form onSubmit={handleSubmit}>
                         <div class="user-details">
                             <div class="input-box">
-                                <span class="details">type </span>
-                                <select style={{ "width": "250px" }}  name="type" idd="animal" required onChange={e => setType(e.target.value)} >
-                                    <option value={""} ></option>
-                                    <option value={"cat"} >Cat</option>
-                                    <option value={"dog"} >Dog</option>
-                                    <option value={"bird"} >Bird</option>
-                                    <option value={"reptile"} >Reptile</option>
-                                </select>
+                                <span class="details">Name </span>
+                                <input style={{ "width": "280px" }} type="text" required onChange={e => setType(e.target.value)} />
                             </div>
                         </div>
                         <div class="button">
