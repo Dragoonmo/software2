@@ -8,7 +8,7 @@ import { faPlus, faRightFromBracket, faBell, faHouse } from '@fortawesome/free-s
 import c from '../../../Assert/Images/course.jpg'
 const Your_Course = () => {
 
-    const [Animall_info, setAnimal_info] = useState([])
+    const [Course_info, setCourse_info] = useState([])
     const { id } = useParams()
 
     const navigate = useNavigate()
@@ -26,7 +26,7 @@ const Your_Course = () => {
         axios.get('http://localhost:3001/animal/show_all_animal_ad', { withCredentials: true })
             .then(res => {
                 if (res.data.valid) {
-                    setAnimal_info(res.data.result)
+                    setCourse_info(res.data.result)
                 }
                 else {
                     navigate('/login')
@@ -37,7 +37,7 @@ const Your_Course = () => {
         [])
     return (
         <>
-        <Header href1={"/#"} a1={""} href2={"/common_users"} a2={"FAQs"} href5={"/Add_Animal"} a5={<FontAwesomeIcon icon={faPlus} />} href3={"/Animal_infoo"} a3={"All Course"} href4={"/All_problem"} a4={"Ploblems"} href6={"/#"} a6={""} href7={"/profile"} a7={<div id="login-btn" className="fas fa-user"></div>} href8={"/"} a8={<FontAwesomeIcon icon={faHouse} />} log={'/#'} log2={<div id="login-btn"><FontAwesomeIcon icon={faRightFromBracket} /></div>} />
+        {/* <Header href1={"/#"} a1={""} href2={"/common_users"} a2={"FAQs"} href5={"/Add_Animal"} a5={<FontAwesomeIcon icon={faPlus} />} href3={"/Animal_infoo"} a3={"All Course"} href4={"/All_problem"} a4={"Ploblems"} href6={"/#"} a6={""} href7={"/profile"} a7={<div id="login-btn" className="fas fa-user"></div>} href8={"/"} a8={<FontAwesomeIcon icon={faHouse} />} log={'/#'} log2={<div id="login-btn"><FontAwesomeIcon icon={faRightFromBracket} /></div>} /> */}
 
             <section className="animal" id="animal">
                 <SectionHeader>Chose from your Course </SectionHeader>
@@ -46,7 +46,7 @@ const Your_Course = () => {
                     </div>
                 </div>
                 <div className="box-container">
-                    {Animall_info.map((user, i) => {
+                    {Course_info.map((user, i) => {
                         return (
                             <div key={i}>
                                 <div className="box-container">

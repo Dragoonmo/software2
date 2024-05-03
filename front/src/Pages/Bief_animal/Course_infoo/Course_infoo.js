@@ -1,5 +1,5 @@
 import './Course_infoo.css'
-import { About_your_course, Header, Your_animal_vaccines } from '../../../Componets/index'
+import { About_your_course, Header } from '../../../Componets/index'
 import { useNavigate } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import axios from 'axios'

@@ -1,9 +1,9 @@
-import './Details_animal_requts.css'
+import './Details_course_requts.css'
 import axios from 'axios'
 import { Link, useNavigate } from 'react-router-dom'
 import { useEffect } from 'react'
 
-const Details_animal_requts = (props) => {
+const Details_course_requts = (props) => {
     return (
         <>
             <div class="container" style={{ "margin-top": "10px", "margin-bottom": "20px" }}>
@@ -34,4 +34,4 @@ const Details_animal_requts = (props) => {
     )
 }
 
-export default Details_animal_requts
+export default Details_course_requts

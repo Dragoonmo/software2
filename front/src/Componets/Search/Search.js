@@ -7,18 +7,17 @@ import axios from 'axios'
 const Search = (props) => {
 
     const navigate = useNavigate()
-    const [Name_animal, setName_animal] = useState('')
+    const [Name_course, setName_course] = useState('')
 
     axios.defaults.withCredentials = true
     const handleSearch = async (e) => {
         e.preventDefault()
-        axios.post('http://localhost:3001/user/search', { Name_animal })
+        axios.post('http://localhost:3001/user/search', { Name_course })
             .then(res => {navigate('/Animal_info')})
             .catch(err => { console.log(err) })
     }
     return (
         <>
-            <Header href1={"/Animal"} a1={"Animal"} href3={"#"} a3={"Common Problems"} href2={"#"} a2={"Adopt Animal"} href4={"/login"} a4={"Login"} />
 
             <div className="container">
                 <div className="title">{props.title}</div>
@@ -26,7 +25,7 @@ const Search = (props) => {
                     <form action="#" onSubmit={handleSearch}>
                         <div className="user-details">
                             <div className="input-box">
-                                <input style={{ "width": "300px" }} type="text" placeholder={props.placeholder} required onChange={e => setName_animal(e.target.value)} />
+                                <input style={{ "width": "300px" }} type="text" placeholder={props.placeholder} required onChange={e => setName_course(e.target.value)} />
                             </div>
                         </div>
                         <div className="button">

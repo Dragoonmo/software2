@@ -43,7 +43,7 @@ const Requests = (props) => {
           <p>{props.text}</p>
         </div>
         <div>
-          <Link style={{ "margin-left": "175px", "width": "110px" }} className="btn" to={`/animal_dtails/${props.id}`}>details</Link>
+          <Link style={{ "margin-left": "175px", "width": "110px" }} className="btn" to={`/Course_dtails/${props.id}`}>details</Link>
         </div>
         <div>
           <button onClick={e => handleAccept(props.id2)} style={{ "margin-left": "150px" }} className="btn">Acceptance</button>

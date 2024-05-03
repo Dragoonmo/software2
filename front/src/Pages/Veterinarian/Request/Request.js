@@ -10,7 +10,6 @@ const Request = () => {
 
   const navigate = useNavigate()
   const [Info, setInfo] = useState([])
-  const [Animal_id, setAnimal_id] = useState()
 
 
   useEffect(() => {
@@ -19,7 +18,6 @@ const Request = () => {
       .then(res => {
         if (res.data.valid) {
           setInfo(res.data.result)
-          // setAnimal_id(res.data.result2)
 
         }
         else {

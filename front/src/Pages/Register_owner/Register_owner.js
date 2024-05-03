@@ -28,7 +28,7 @@ const Register_owner = () => {
             axios.post('http://localhost:3001/user/signup_user', {First_name,Last_name,Email,Phone,Password,Age,Gender})
                 .then(res => {
                     if (res.data.Login) {
-                        navigate('/Add_animal')
+                        navigate('/Add_course')
                     }
                     alert("good")
                 }

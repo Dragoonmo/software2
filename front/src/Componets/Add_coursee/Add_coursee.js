@@ -44,7 +44,7 @@ const Add_coursee = () => {
           </div>
           <div class="input-box">
             <span class="details">years </span>
-            <select   required onChange={e => setYears(e.target.value)}>
+            <select style={{"width":"130px"}}   required onChange={e => setYears(e.target.value)}>
               <option value={"1"} >1</option>
               <option value={"2"} >2</option>
               <option value={"3"} >3</option>

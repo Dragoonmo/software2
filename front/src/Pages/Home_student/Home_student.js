@@ -1,15 +1,14 @@
 import { useEffect, useState } from 'react'
-import { Card, Bunner, Problems, Header, SectionHeader, Animal_info, Button, Add_proplem } from '../../Componets/index'
+import { Card, Bunner, Problems, Header, SectionHeader, Button, Add_proplem } from '../../Componets/index'
 import './Home_student.css'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
-import animal_image from '../../Assert/Images/—Pngtree—parrot_1001948.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlus, faRightFromBracket, faBell, faHouse ,faMessage ,faUserDoctor,faStethoscope} from '@fortawesome/free-solid-svg-icons'
 
 const Home_student = () => {
   const [name, setName] = useState('')
-  const [Animall_info, setAnimal_info] = useState([])
+  const [Course_info, setCourse_info] = useState([])
   const [Problim_info, setProblim_info] = useState([])
   const [Advice, setAdvice] = useState([])
   const [Isnotefi, setIsnotefi] = useState('')
@@ -23,7 +22,7 @@ const Home_student = () => {
       .then(res => {
         if (res.data.valid) {
           setName(res.data.username)
-          setAnimal_info(res.data.result)
+          setCourse_info(res.data.result)
           setProblim_info(res.data.resultt)
           setAdvice(res.data.resulttt)
           setIsnotefi(res.data.resultttt)
@@ -68,7 +67,6 @@ const Home_student = () => {
             </div>
           </div>
           <div style={{ "padding-right": "60px" }}  className="image">
-            {/* <img src={animal_image} alt="" /> */}
           </div>
         </div>
       </section>
@@ -82,14 +80,13 @@ const Home_student = () => {
         </div>
         <div className="box-container">
 
-          {Animall_info.map((user, i) => {
+          {Course_info.map((user, i) => {
             return (
               <div key={i}>
                 <Card image={'http://localhost:3001/uploads/' + user.urlImage} name={user.name} href_link={`Course_info_id/${user.id}`} link={"see details"} id={user.id} />
               </div>
             )
           })}
-                          {/* <Card image={animal_image} name={"user.name"} href_link={`Course_info_id/${5}`} link={"see details"} id={5} /> */}
 
         </div>
       </section>

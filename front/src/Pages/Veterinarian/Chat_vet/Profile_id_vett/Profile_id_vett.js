@@ -9,7 +9,7 @@ import { faPlus, faRightFromBracket, faBell, faHouse } from '@fortawesome/free-s
 const Profile_id_vett = () => {
     const { id } = useParams()
     const [Info, setInfo] = useState([])
-    const [Animals, setAnimals] = useState([])
+    const [Course, setCourse] = useState([])
     var a = []
 
     useEffect(() => {
@@ -17,14 +17,14 @@ const Profile_id_vett = () => {
             .then(res => {
                 if (res.data.valid) {
                     setInfo(res.data.result)
-                    setAnimals(res.data.results)
+                    setCourse(res.data.results)
                 }
                 else alert("err")
             })
             .catch(err => { alert(err) })
     }, [])
 
-    Animals.map((d, i) => {
+    Course.map((d, i) => {
 
         a.push(d.type + ",")
 
@@ -36,7 +36,7 @@ const Profile_id_vett = () => {
             {Info.map((d, i) => {
                 return (
                     <div key={i}>
-                        <Profilee_id first_name={d.first_name} last_name={d.last_name} email={d.email} phone={d.phone} age={d.age} gender={d.gender} animals={a} />
+                        <Profilee_id first_name={d.first_name} last_name={d.last_name} email={d.email} phone={d.phone} age={d.age} gender={d.gender} />
                     </div>
                 )
             })}
