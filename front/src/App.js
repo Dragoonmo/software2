@@ -4,18 +4,14 @@ import './App.css'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 
 import {
-  Container, Login, Register_owner,
-  Register_veterinarian, Home_student, Type, Add_course, Course_infoo, Profile,
-  Common_users, Problem_id, Update_user,
-  Course_info_id, All_problem, Conversation, Verification,
-  Your_ploblem, Update_problem, Page_chat, Profile_id, Search_user, Search_result,
-  Type_search, Common_vete, Add_common, Request, Your_Course,
-  Search_problem, Search_result2, All_followw, Home, All_teacher, Details_Course, Update_vet,
-  Profile_teacher_id, Add_advices, All_advices, FAQs,
-  Animal_info_id_follow, All_problems_vet, Problem_id_vet, Your_problem_vet, Update_problem_vet,
-  Course_follow_id, Page_chat_vet, Conversation_vet, Profile_id_vett, Search_user_vet
-  , Type_search_vet, Search_result_vet,
-  Search_teacher
+  Container, Login, Register_owner,Register_veterinarian, Home_student, Type, Add_course,
+  Course_infoo, Profile,Common_users, Problem_id, Update_user,Course_info_id, All_problem,
+  Conversation, Verification,Your_ploblem, Update_problem, Page_chat, Profile_id, Search_user,
+  Search_result,Type_search, Common_vete, Add_common, Request, Your_Course,All_followw, Home,
+  All_teacher, Details_Course, Update_vet,Add_advices, All_advices, FAQs,All_problems_vet,
+  Problem_id_vet, Your_problem_vet, Update_problem_vet,Course_follow_id, Page_chat_vet,
+  Conversation_vet, Profile_id_vett, Search_user_vet,Type_search_vet, Search_result_vet,
+  Search_teacher,Search_vet_page,Add_course_teach
 } from './Componets/index'
 
 const App = () => {
@@ -56,8 +52,9 @@ const App = () => {
             <Route path='/profile_id_vettt/:id' element={<Profile_id_vett />} />
             <Route path='/Search_user' element={<Search_user />} />
             <Route path='/Search_teacher' element={<Search_teacher />} />
+            <Route path='/Search_teacher_vet' element={<Search_vet_page />} />
             <Route path='/Search_user_vet' element={<Search_user_vet />} />
-            <Route path='/search_result/:Type' element={<Search_result />} />
+            <Route path='/search_result/:Name' element={<Search_result />} />
             <Route path='/search_result_vet/:Type' element={<Search_result_vet />} />
             <Route path='/Search_type' element={<Type_search />} />
             <Route path='/Search_type_vet' element={<Type_search_vet />} />
@@ -82,6 +79,9 @@ const App = () => {
             <Route path='my_problem_vet' element={<Your_problem_vet />} />
             <Route path='my_problem_vet/update_problem/:id' element={<Update_problem_vet />} />
             <Route path='chat_vet' element={<Page_chat_vet />} />
+            <Route path='add_course_teach' element={<Add_course_teach />} />
+
+            
           </Routes>
         </Container>
       </Router>

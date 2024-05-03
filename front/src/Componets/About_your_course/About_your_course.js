@@ -38,7 +38,7 @@ const About_your_course = (props) => {
 
                             </div>
                             <div class="button">
-                                <button onClick={handleDelete}>Deleet</button>
+                                <button onClick={() => handleDelete(props.id)}>Deleet</button>
                             </div>
 
 

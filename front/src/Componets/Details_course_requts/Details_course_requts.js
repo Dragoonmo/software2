@@ -24,8 +24,6 @@ const Details_course_requts = (props) => {
                                 <span class="details">Additional details </span>
                                 <p>{props.details}</p>
                             </div>
-  
-  
                         </div>
                     </form>
                 </div>

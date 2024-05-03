@@ -4,7 +4,7 @@ import { Card, Bunner, Problems, Header, SectionHeader, Button, Add_proplem } fr
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faNotesMedical, faRightFromBracket, faBell, faHouse, faMessage, faLink, faSyringe } from '@fortawesome/free-solid-svg-icons'
+import { faNotesMedical, faRightFromBracket, faPlus, faHouse, faMessage, faLink, faSyringe } from '@fortawesome/free-solid-svg-icons'
 
 const Home = () => {
     const [name, setName] = useState('')
@@ -38,7 +38,7 @@ const Home = () => {
     return (
         <>
 
-            <Header href1={"/#"} a1={""} href2={"/common_vete"} a2={"FAQs"} href5={"/requst"} a5={<FontAwesomeIcon icon={faLink} />} href6={"all_advice"} a6={<FontAwesomeIcon icon={faNotesMedical} />} href7={"#"} a7={""} href3={"all_follow"} a3={"All Follow"} href4={"/Forum_vet"} a4={"Forum"} href8={"/chat_vet"} a8={<FontAwesomeIcon icon={faMessage} />} href9={"/#"} a9={""} href10={"#"} a10={""} href11={"Home_vet"} a11={<FontAwesomeIcon icon={faHouse} />} log={'/#'} log2={<div id="login-btn"><FontAwesomeIcon icon={faRightFromBracket} /></div>} />
+            <Header href1={"/#"} a1={""} href2={"/common_vete"} a2={"FAQs"} href5={"/requst"} a5={<FontAwesomeIcon icon={faLink} />} href6={"all_advice"} a6={<FontAwesomeIcon icon={faNotesMedical} />} href7={"add_course_teach"} a7={<FontAwesomeIcon icon={faPlus} />} href3={"all_follow"} a3={"All Follow"} href4={"/Forum_vet"} a4={"Forum"} href8={"/chat_vet"} a8={<FontAwesomeIcon icon={faMessage} />} href9={"/#"} a9={""} href10={"#"} a10={""} href11={"Home_vet"} a11={<FontAwesomeIcon icon={faHouse} />} log={'/#'} log2={<div id="login-btn"><FontAwesomeIcon icon={faRightFromBracket} /></div>} />
 
             <section className="bbanner" style={{ "margin-top": "00px" }}>
                 <div className="row">

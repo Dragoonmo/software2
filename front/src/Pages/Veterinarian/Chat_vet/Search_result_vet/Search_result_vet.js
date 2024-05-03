@@ -8,12 +8,12 @@ import { faPlus, faRightFromBracket, faBell, faHouse } from '@fortawesome/free-s
 
 const Search_result_vet = () => {
 
-    const { Type } = useParams()
+    const { Name } = useParams()
     const [Info, setInfo] = useState([])
 
     useEffect(() => {
 
-        axios.get(`http://localhost:3001/chat/search_user/${Type}`, { withCredentials: true })
+        axios.get(`http://localhost:3001/chat/search_user/${Name}`, { withCredentials: true })
             .then(res => {
                 if (res.data.valid) {
                     setInfo(res.data.result)

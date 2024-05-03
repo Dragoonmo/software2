@@ -35,7 +35,7 @@ const Course_infoo = () => {
           return (
             <div key={i}>
               <About_your_course name={d.name} age={d.age} details={d.Additional_details}
-                id={d.id} id2={d.animal_id} />
+                id={d.id} />
             </div>
           )
         })}

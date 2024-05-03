@@ -9,12 +9,12 @@ import axios from 'axios'
 const Search_user = () => {
 
     const navigate = useNavigate()
-    const [Type, setType] = useState('')
+    const [Name, setName] = useState('')
 
     axios.defaults.withCredentials = true
     const handleSubmit = async (e) => {
-        // alert(Type)
-        navigate(`/search_result/${Type}`)
+        // alert(Name)
+        navigate(`/search_result/${Name}`)
 
     }
     return (
@@ -28,7 +28,7 @@ const Search_user = () => {
                         <div class="user-details">
                             <div class="input-box">
                                 <span class="details">Name </span>
-                                <input style={{ "width": "280px" }} type="text" required onChange={e => setType(e.target.value)} />
+                                <input style={{ "width": "280px" }} type="text" required onChange={e => setName(e.target.value)} />
                             </div>
                         </div>
                         <div class="button">

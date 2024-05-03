@@ -8,11 +8,9 @@ export {default as Type} from '../Pages/Type/Type'
 export {default as Register_veterinarian} from '../Pages/Register_veterinarian/Register_veterinarian'
 export {default as Verification} from '../Pages/Verification/Verification'
 export {default as Add_course} from '../Pages/Add_course/Add_course'
-export {default as Search} from './Search/Search'
 export {default as Course_infoo} from '../Pages/Bief_animal/Course_infoo/Course_infoo'
 export {default as Card} from './Card/Card'
 export {default as SectionHeader} from './SectionHeader/SectionHeader'
-export {default as Animal_info} from './Animal_info/Animal_info'
 export {default as Button} from './Button/Button'
 export {default as Common_users} from '../Pages/Common_proplems/Common_users/Common_users'
 export {default as Common_vete} from '../Pages/Common_proplems/Common_vete/Common_vete'
@@ -73,24 +71,6 @@ export {default as Type_search_vet} from '../Pages/Veterinarian/Chat_vet/Type_se
 export {default as Search_user_vet} from '../Pages/Veterinarian/Chat_vet/Search_user_vet/Search_user_vet'
 export {default as Search_vet_page} from '../Pages/Veterinarian/Chat_vet/Search_vet_page/Search_vet_page'
 export {default as Search_result_vet} from '../Pages/Veterinarian/Chat_vet/Search_result_vet/Search_result_vet'
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+export {default as Add_course_teach} from '../Pages/Veterinarian/Add_course_teach/Add_course_teach'
+export {default as Componets_Add_course_teach} from './1veterinarian/Componets_Add_course_teach/Componets_Add_course_teach'
 
