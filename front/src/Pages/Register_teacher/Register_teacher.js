@@ -1,4 +1,4 @@
-import './Register_veterinarian.css'
+import './Register_teacher.css'
 import React, { useState } from 'react'
 import { Header } from '../../Componets'
 import axios from 'axios'
@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faRightToBracket } from '@fortawesome/free-solid-svg-icons'
 
-const Register_veterinarian = () => {
+const Register_teacher = () => {
   const navigate = useNavigate()
 
   const [First_name, setFirst_name] = useState('')
@@ -141,4 +141,4 @@ const Register_veterinarian = () => {
   )
 }
 
-export default Register_veterinarian
+export default Register_teacher

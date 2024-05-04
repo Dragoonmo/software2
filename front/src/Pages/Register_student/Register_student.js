@@ -1,4 +1,4 @@
-import './Register_owner.css'
+import './Register_student.css'
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
@@ -6,7 +6,7 @@ import { Header } from '../../Componets'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faRightToBracket } from '@fortawesome/free-solid-svg-icons'
 
-const Register_owner = () => {
+const Register_student = () => {
 
     const navigate = useNavigate()
 
@@ -102,4 +102,4 @@ const Register_owner = () => {
     )
 }
 
-export default Register_owner
+export default Register_student

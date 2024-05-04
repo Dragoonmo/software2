@@ -4,7 +4,7 @@ import './App.css'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 
 import {
-  Container, Login, Register_owner,Register_veterinarian, Home_student, Type, Add_course,
+  Container, Login, Register_student,Register_teacher, Home_student, Type, Add_course,
   Course_infoo, Profile,Common_users, Problem_id, Update_user,Course_info_id, All_problem,
   Conversation, Verification,Your_ploblem, Update_problem, Page_chat, Profile_id, Search_user,
   Search_result,Type_search, Common_vete, Add_common, Request, Your_Course,All_followw, Home,
@@ -27,8 +27,8 @@ const App = () => {
             <Route path='/login' element={<Login />} />
             <Route path='Loginn' element={<Login />} />
             <Route path='/Registration' element={<Type />} />
-            <Route path='/Register_owner' element={<Register_owner />} />
-            <Route path='/Register_veterinarian' element={<Register_veterinarian />} />
+            <Route path='/Register_student' element={<Register_student />} />
+            <Route path='/Register_teacher' element={<Register_teacher />} />
             <Route path='/TypeRegister' element={<Type />} />
             <Route path='/Back' element={<Login />} />
             <Route path='/Back_to_type' element={<Type />} />

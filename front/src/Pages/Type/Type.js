@@ -7,7 +7,7 @@ const Type = () => {
         <>
             <Header href1={"/#"} a1={""} href3={"#"} a3={""} log={'/login'} log2={<div id="login-btn"><FontAwesomeIcon icon={faRightToBracket} /></div>} />
 
-            <Choose_button title="account type " href1="/Register_owner" name1="Student" href2="/Register_veterinarian" name2="Teachers" />
+            <Choose_button title="account type " href1="/Register_student" name1="Student" href2="/Register_teacher" name2="Teachers" />
 
         </>
     )
