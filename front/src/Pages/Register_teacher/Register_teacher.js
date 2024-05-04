@@ -60,7 +60,7 @@ const Register_teacher = () => {
     <>
       <Header href1={"/#"} a1={""} href3={"#"} a3={""} log={'/login'} log2={<div id="login-btn"><FontAwesomeIcon icon={faRightToBracket} /></div>} />
 
-      <div style={{ "margin-top": "600px", "margin-bottom": "70px" }}>
+      <div style={{ "margin-top": "00px", "margin-bottom": "0px" }}>
         <div className="container" >
           <div className="title">Registration Teachers</div>
           <div className="content">
