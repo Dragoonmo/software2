@@ -78,19 +78,6 @@ const Profilee_id = (props) => {
                         </div>
 
                     </div>
-                    {/* <div className="skils">
-
-                        <h2 className="title2">Type Animals</h2>
-
-                        <div className="box">
-                            <div className="fst">
-                                <h5>Animals :</h5>
-                            </div>
-                            <div className="nameSkils">
-                                <h4>{props.animals}</h4>
-                            </div>
-                        </div>
-                    </div> */}
                 </div>
             </div>
         </>

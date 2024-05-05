@@ -8,12 +8,12 @@ import { faPlus, faRightFromBracket, faBell, faHouse } from '@fortawesome/free-s
 
 const Search_result = () => {
 
-    const { Type } = useParams()
+    const { Name } = useParams()
     const [Info, setInfo] = useState([])
 
     useEffect(() => {
 
-        axios.get(`http://localhost:3001/chat/search_user/${Type}`, { withCredentials: true })
+        axios.get(`http://localhost:3001/chat/search_user/${Name}`, { withCredentials: true })
             .then(res => {
                 if (res.data.valid) {
                     setInfo(res.data.result)
@@ -26,7 +26,7 @@ const Search_result = () => {
 
     return (
         <>
-            <Header href1={"/#"} a1={""} href2={"/common_users"} a2={"FAQs"} href3={"/Animal_infoo"} a3={"My Course"} href4={"/All_problem"} a4={"Forum"} href6={"/#"} a6={""} href7={"/profile"} a7={<div id="login-btn" className="fas fa-user"></div>} href8={"/"} a8={<FontAwesomeIcon icon={faHouse} />} log={'/#'} log2={<div id="login-btn"><FontAwesomeIcon icon={faRightFromBracket} /></div>} />
+            <Header href1={"/#"} a1={""} href2={"/common_users"} a2={"FAQs"} href3={"/Course_infoo"} a3={"My Course"} href4={"/All_problem"} a4={"Forum"} href6={"/#"} a6={""} href7={"/profile"} a7={<div id="login-btn" className="fas fa-user"></div>} href8={"/"} a8={<FontAwesomeIcon icon={faHouse} />} log={'/#'} log2={<div id="login-btn"><FontAwesomeIcon icon={faRightFromBracket} /></div>} />
 
             <section style={{ "backgroundColor": "#f5f5f5", "margin-top": "0px" }} class="cards contact" id="contact">
                 <h2 className="titlee">New message</h2>

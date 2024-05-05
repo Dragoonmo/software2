@@ -26,10 +26,10 @@ const Your_ploblem = () => {
     }, [])
     return (
         <>
-            <Header href1={"/#"} a1={""} href2={"/common_users"} a2={"FAQs"} href3={"/Animal_infoo"} a3={"My Animals"} href4={"/All_problem"} a4={"Forum"} href6={"/#"} a6={""} href7={"/profile"} a7={<div id="login-btn" className="fas fa-user"></div>} href8={"/"} a8={<FontAwesomeIcon icon={faHouse} />} log={'/#'} log2={<div id="login-btn"><FontAwesomeIcon icon={faRightFromBracket} /></div>} />
+            <Header href1={"/#"} a1={""} href2={"/common_users"} a2={"FAQs"} href3={"/Course_infoo"} a3={"My Course"} href4={"/All_problem"} a4={"Forum"} href6={"/#"} a6={""} href7={"/profile"} a7={<div id="login-btn" className="fas fa-user"></div>} href8={"/"} a8={<FontAwesomeIcon icon={faHouse} />} log={'/#'} log2={<div id="login-btn"><FontAwesomeIcon icon={faRightFromBracket} /></div>} />
 
 
-            <section className="pricing" id="pricing" style={{ "margin-top":"2400px"}}>
+            <section className="pricing" id="pricing" style={{ "margin-top":"00px"}}>
                 <h2 className="heading" style={{ "margin-left":"90px"}}>Forum</h2>
 
                 <div className="box-container" style={{ "width":"600px" }}>

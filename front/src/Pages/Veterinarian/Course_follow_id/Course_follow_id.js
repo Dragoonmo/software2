@@ -1,23 +1,30 @@
-import './All_followw.css'
-import { All_follow, Header } from '../../../Componets/index'
-import { useNavigate } from 'react-router-dom'
-import { useState, useEffect } from 'react'
+import './Course_follow_id.css'
 import axios from 'axios'
+import { useState, useEffect } from 'react'
+import { Header, All_follow } from '../../../Componets'
+import { useNavigate, useParams } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPlus, faBell, faRightFromBracket, faHouse } from '@fortawesome/free-solid-svg-icons'
+import { faPlus, faRightFromBracket, faBell, faHouse, faMessage, faUserDoctor, faStethoscope } from '@fortawesome/free-solid-svg-icons'
 
-
-const All_followw = () => {
+const Course_follow_id = () => {
 
     const navigate = useNavigate()
+    const [Name, setName] = useState('')
+    const { id } = useParams()
     const [Info, setInfo] = useState([])
+
+    const [Age, setAge] = useState()
 
     useEffect(() => {
 
-        axios.get('http://localhost:3001/vet/allf', { withCredentials: true })
+        axios.get(`http://localhost:3001/animal/show_animal_id/${id}`, { withCredentials: true })
             .then(res => {
                 if (res.data.valid) {
                     setInfo(res.data.result)
+                    setAge(res.data.age)
+                }
+                else if (res.data.value) {
+                    navigate('/')
                 }
                 else {
                     navigate('/login')
@@ -43,4 +50,4 @@ const All_followw = () => {
     )
 }
 
-export default All_followw
+export default Course_follow_id

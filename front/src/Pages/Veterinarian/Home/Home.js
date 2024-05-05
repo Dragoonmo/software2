@@ -1,15 +1,14 @@
 import './Home.css'
 import { useEffect, useState } from 'react'
-import { Card, Bunner, Problems, Header, SectionHeader, Animal_info, Button, Add_proplem } from '../../../Componets/index'
+import { Card, Bunner, Problems, Header, SectionHeader, Button, Add_proplem } from '../../../Componets/index'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
-import animal_image from '../../../Assert/Images/—Pngtree—parrot_1001948.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faNotesMedical, faRightFromBracket, faBell, faHouse, faMessage, faLink, faSyringe } from '@fortawesome/free-solid-svg-icons'
+import { faNotesMedical, faRightFromBracket, faPlus, faHouse, faMessage, faLink, faSyringe } from '@fortawesome/free-solid-svg-icons'
 
 const Home = () => {
     const [name, setName] = useState('')
-    const [Animall_info, setAnimal_info] = useState([])
+    const [Coursee_info, setCourse_info] = useState([])
     const [Problim_info, setProblim_info] = useState([])
     const [Events, setEvent] = useState([])
     const [Isnotefi, setIsnotefi] = useState('')
@@ -23,7 +22,7 @@ const Home = () => {
             .then(res => {
                 if (res.data.valid) {
                     setName(res.data.username)
-                    setAnimal_info(res.data.result)
+                    setCourse_info(res.data.result)
                     setProblim_info(res.data.resultt)
                     setEvent(res.data.resulttt)
                     setIsnotefi(res.data.resultttt)
@@ -39,7 +38,7 @@ const Home = () => {
     return (
         <>
 
-            <Header href1={"/#"} a1={""} href2={"/common_vete"} a2={"FAQs"} href5={"/requst"} a5={<FontAwesomeIcon icon={faLink} />} href6={"all_advice"} a6={<FontAwesomeIcon icon={faNotesMedical} />} href7={"#"} a7={""} href3={"all_follow"} a3={"All Follow"} href4={"/Forum_vet"} a4={"Forum"} href8={"/chat_vet"} a8={<FontAwesomeIcon icon={faMessage} />} href9={"/#"} a9={""} href10={"profile_vet"} a10={<div id="login-btn" className="fas fa-user"></div>} href11={"Home_vet"} a11={<FontAwesomeIcon icon={faHouse} />} log={'/#'} log2={<div id="login-btn"><FontAwesomeIcon icon={faRightFromBracket} /></div>} />
+            <Header href1={"/#"} a1={""} href2={"/common_vete"} a2={"FAQs"} href5={"/requst"} a5={<FontAwesomeIcon icon={faLink} />} href6={"all_advice"} a6={<FontAwesomeIcon icon={faNotesMedical} />} href7={"add_course_teach"} a7={<FontAwesomeIcon icon={faPlus} />} href3={"all_follow"} a3={"All Follow"} href4={"/Forum_vet"} a4={"Forum"} href8={"/chat_vet"} a8={<FontAwesomeIcon icon={faMessage} />} href9={"/#"} a9={""} href10={"#"} a10={""} href11={"Home_vet"} a11={<FontAwesomeIcon icon={faHouse} />} log={'/#'} log2={<div id="login-btn"><FontAwesomeIcon icon={faRightFromBracket} /></div>} />
 
             <section className="bbanner" style={{ "margin-top": "00px" }}>
                 <div className="row">
@@ -68,7 +67,6 @@ const Home = () => {
                         </div>
                     </div>
                     <div className="image">
-                        {/* <img src={animal_image} alt="" /> */}
                     </div>
                 </div>
             </section>
@@ -82,10 +80,10 @@ const Home = () => {
                 </div>
                 <div className="box-container">
 
-                    {Animall_info.map((user, i) => {
+                    {Coursee_info.map((user, i) => {
                         return (
                             <div key={i}>
-                                <Card image={'http://localhost:3001/uploads/' + user.urlImage} name={user.name} href_link={`Animal_info_id_follow/${user.id}`} link={"see details"} id={user.id} />
+                                <Card image={'http://localhost:3001/uploads/' + user.urlImage} name={user.name} href_link={`Course_follow_id/${user.id}`} link={"see details"} id={user.id} />
                             </div>
                         )
                     })}
