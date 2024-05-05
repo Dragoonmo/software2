@@ -43,7 +43,7 @@ const Details_Course = () => {
                 {Info.map((d, i) => {
                     return (
                         <div key={i}>
-                            <Details_course_requts name={d.name} age={Age} place={d.place} color={d.color} details={d.Additional_details}
+                            <Details_course_requts name={d.name} age={d.year} place={d.place} color={d.color} details={d.Additional_details}
                                 type={d.type} gender={d.gender} weight={d.weight} height={d.high} health={d.health_stats} id2={d.id} />
                         </div>
                     )

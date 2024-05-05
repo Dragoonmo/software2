@@ -38,7 +38,7 @@ const Course_info_id = () => {
                 {Info.map((d, i) => {
                     return (
                         <div key={i}>
-                            <About_your_course name={d.name} age={Age} details={d.Additional_details}
+                            <About_your_course name={d.name} age={d.year} details={d.Additional_details}
                                 id2={d.type} />
                         </div>
                     )

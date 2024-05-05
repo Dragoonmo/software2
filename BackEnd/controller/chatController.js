@@ -81,9 +81,9 @@ else return res.json({valid:false})
 }
 function search_user (req,res){
     if(req.session.username){
-    var type=req.params.Type
-    sql='select * from user_infos where email IN (select owner from courses  where type=? AND owner!=? AND owner not in(select reciver from chats where Sender=?))'
-    db.query(sql,[type,req.session.username,req.session.username],(err,result)=>{
+    var name=req.params.Name
+    sql='select * from user_infos where first_name like ? or last_name like? and email!=?'
+    db.query(sql,['%'+ name+'%','%'+ name+'%',req.session.username],(err,result)=>{
         if(err) console.log(err)
         console.log(result)
         return res.json({valid:true,result})
