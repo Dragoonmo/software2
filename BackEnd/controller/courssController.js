@@ -7,7 +7,7 @@ const db=require("../dbb/db")
 
 function show_all_courss(req,res) {
     if(req.session.username){
-    const sql=' SELECT * from courses   WHERE courses.owner=?'
+    const sql=' SELECT * from courses WHERE courses.owner=?'
     db.query(sql,[req.session.username], (err, result) => {
         if (err) return res.json(err)
         return res.json({result,valid:true}) + console.log()

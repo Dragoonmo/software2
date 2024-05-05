@@ -42,7 +42,7 @@ app.use(express.static(path.join(__dirname,'public')))
 app.use(express.json())
 
 app.use("/user",userRoute)
-app.use("/animal",courssRouts)
+app.use("/courses",courssRouts)
 app.use("/problim",problimRouter)
 app.use("/co_problim",comprrout)
 app.use("/chat",chat)

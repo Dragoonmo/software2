@@ -21,7 +21,7 @@ const Update_problem_vet = () => {
       .then(res => {
         setName(res.data.result[0].title)
         setDetails(res.data.result[0].disc)
-        setType(res.data.result[0].animal_type)
+        setType(res.data.result[0].courss_type)
       })
       .catch(err => { console.log(err) })
   }, [])

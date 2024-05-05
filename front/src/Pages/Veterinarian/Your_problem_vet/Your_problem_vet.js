@@ -34,7 +34,7 @@ const Your_problem_vet = () => {
                     {Info.map((user, i) => {
                         return (
                             <div key={i}>
-                                <Your_prob name={user.title} text={user.disc} type={user.animal_type} id1={user.id} id2={user.id} />
+                                <Your_prob name={user.title} text={user.disc} type={user.courss_type} id1={user.id} id2={user.id} />
                             </div>
                         )
                     })}

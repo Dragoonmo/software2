@@ -41,7 +41,7 @@ const Problem_id = (props) => {
                     {Problim_info.map((user, i) => {
                         return (
                             <div key={i}>
-                                <Problems name={user.title} text={user.disc} type={user.animal_type} id1={id} id2={user.id} hreflink={""} />
+                                <Problems name={user.title} text={user.disc} type={user.courss_type	} id1={id} id2={user.id} hreflink={""} />
                             </div>
                         )
                     })}

@@ -36,7 +36,7 @@ const All_problem = () => {
                 <div className="box-container">
                     {Problim_info.map((user, i) => (
                         <div key={i}>
-                            <Problems name={user.title} text={user.disc} hreflink={`Problem_id/${user.id}`} type={user.animal_type} id1={user.id} />
+                            <Problems name={user.title} text={user.disc} hreflink={`Problem_id/${user.id}`} type={user.courss_type} id1={user.id} />
                         </div>
                     ))}
                 </div>

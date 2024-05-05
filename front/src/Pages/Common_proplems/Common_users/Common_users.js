@@ -35,7 +35,7 @@ const Common_users = () => {
                         return (
                             <div key={d}>
 
-                                <Common_proplem type={i.animal_type} name={i.title} detals={i.disc} />
+                                <Common_proplem type={i.cours_type} name={i.title} detals={i.disc} />
 
                             </div>
                         )

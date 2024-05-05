@@ -99,7 +99,7 @@ const Home = () => {
                     {Problim_info.map((user, i) => {
                         return (
                             <div key={i}>
-                                <Problems name={user.title} text={user.disc} type={user.animal_type} hreflink={`Problem_id/${user.id}`} id1={user.id} />
+                                <Problems name={user.title} text={user.disc} type={user.type} hreflink={`Problem_id/${user.id}`} id1={user.id} />
                             </div>
                         )
                     })}

@@ -38,7 +38,7 @@ const Request = () => {
           {Info.map((d, i) => {
             return (
               <div key={i}>
-                <Requests title={d.title} text={d.owner} id={d.animal_id_f} id2={d.f_id} />
+                <Requests title={d.title} text={d.owner} id={d.courss_id_f} id2={d.f_id} />
               </div>
             )
           })}

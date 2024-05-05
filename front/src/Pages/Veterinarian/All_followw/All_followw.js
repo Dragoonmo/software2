@@ -34,7 +34,7 @@ const All_followw = () => {
                     return (
                         <div key={i}>
                             <All_follow name={d.name} age={d.age} details={d.Additional_details}
-                                id2={d.animal_id} />
+                                id2={d.courss_id_f} />
                         </div>
                     )
                 })}

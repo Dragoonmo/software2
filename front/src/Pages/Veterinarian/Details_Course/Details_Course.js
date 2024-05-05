@@ -19,7 +19,7 @@ const Details_Course = () => {
 
     useEffect(() => {
 
-        axios.get(`http://localhost:3001/animal/show_animal_id/${id}`, { withCredentials: true })
+        axios.get(`http://localhost:3001/courses/show_courses_id/${id}`, { withCredentials: true })
             .then(res => {
                 if (res.data.valid) {
                     setInfo(res.data.result)
@@ -44,7 +44,7 @@ const Details_Course = () => {
                     return (
                         <div key={i}>
                             <Details_course_requts name={d.name} age={Age} place={d.place} color={d.color} details={d.Additional_details}
-                                type={d.type} gender={d.gender} weight={d.weight} height={d.high} health={d.health_stats} id2={d.animal_id} />
+                                type={d.type} gender={d.gender} weight={d.weight} height={d.high} health={d.health_stats} id2={d.id} />
                         </div>
                     )
                 })}

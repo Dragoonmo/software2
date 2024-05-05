@@ -23,7 +23,7 @@ const Your_Course = () => {
     }
 
     useEffect(() => {
-        axios.get('http://localhost:3001/animal/show_all_animal_ad', { withCredentials: true })
+        axios.get('http://localhost:3001/courses/show_all_courses_ad', { withCredentials: true })
             .then(res => {
                 if (res.data.valid) {
                     setCourse_info(res.data.result)

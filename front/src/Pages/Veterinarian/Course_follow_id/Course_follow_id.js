@@ -17,7 +17,7 @@ const Course_follow_id = () => {
 
     useEffect(() => {
 
-        axios.get(`http://localhost:3001/animal/show_animal_id/${id}`, { withCredentials: true })
+        axios.get(`http://localhost:3001/courses/show_courses_id/${id}`, { withCredentials: true })
             .then(res => {
                 if (res.data.valid) {
                     setInfo(res.data.result)
@@ -41,7 +41,7 @@ const Course_follow_id = () => {
                     return (
                         <div key={i}>
                             <All_follow name={d.name} age={d.age} details={d.Additional_details}
-                                id2={d.animal_id} />
+                                id2={d.id} />
                         </div>
                     )
                 })}
