@@ -9,8 +9,9 @@ const About_your_course = (props) => {
 
     const handleDelete = async (id) => {
         try {
-            await axios.post('http://localhost:3001/animal/delete/' + id)
-            window.location.reload()
+            await axios.post('http://localhost:3001/courses/delete/'+id)
+            alert('deleted succsesfly')
+            navigate(-1)
         }
         catch (err) { console.log(err) }
     }

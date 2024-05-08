@@ -16,7 +16,7 @@ const Add_coursee = () => {
 
   useEffect(() => {
 
-    axios.get('http://localhost:3001/#/#', { withCredentials: true })
+    axios.get('http://localhost:3001/courses/show_coursss', { withCredentials: true })
       .then(res => {
         if (res.data.valid) {
           setName_FromBackEnd(res.data.result)
@@ -34,7 +34,7 @@ const Add_coursee = () => {
 
     e.preventDefault()
 
-    axios.post('http://localhost:3001/animal/add-animal', { Name, Years, Additional_details })
+    axios.post('http://localhost:3001/courses/add-courss', { Name, Years, Additional_details })
       .then(res => {
         if (res.data.valid) {
           navigate('/')
@@ -55,7 +55,7 @@ const Add_coursee = () => {
 
               {Name_FromBackEnd.map((user, i) => {
                 return (
-                  <option key={i} value={user.name_b} >{user.name_b}</option>
+                  <option key={i} value={user.name_cours} >{user.name_cours}</option>
                 )
               })}
             </select>

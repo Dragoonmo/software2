@@ -81,7 +81,27 @@ function show_all__req(req,res) {
     }
     )
 }
+function show_av_courss(req,res){
+    sql='select * from courss_det'
+    db.query(sql,(error,result)=>{
+        if(error){console.log(error)}
+        else{
+            res.json({valid:true,result})
+            
+        }
+    })
+}
+function add_new_coursss(req,res){
+    sql ="insert into courss_det (name_cours) values ('"+ req.body.Course+"')"
+    db.query(sql,(error,result)=>{
+        if(error){console.log(error)}
+        else{
+            res.json({valid:true,result})
+        }
+    })
 
+
+}
 module.exports={
     add_courss: add_courss,
     destroy_cours: destroy_cours,
@@ -89,5 +109,7 @@ module.exports={
     show_courss_id:show_courss_id,
     show_all_courss_ad:show_all_courss_ad,
     show_all__req:show_all__req,
+    show_av_courss,
+    add_new_coursss
     
 }

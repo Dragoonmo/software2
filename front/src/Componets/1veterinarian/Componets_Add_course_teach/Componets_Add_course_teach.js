@@ -15,7 +15,7 @@ const Componets_Add_course_teach = () => {
 
         e.preventDefault()
 
-        axios.post('http://localhost:3001/vet/#', { Course })
+        axios.post('http://localhost:3001/courses/add-new_courss', { Course })
             .then(res => {
                 if (res.data.valid) {
                     alert('The Course was added successfully')

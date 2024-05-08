@@ -20,7 +20,7 @@ const Course_info_id = () => {
             .then(res => {
                 if (res.data.valid) {
                     setInfo(res.data.result)
-                    setAge(res.data.age)
+                    // setAge(res.data.age)
                 }
                 else if (res.data.value) {
                     navigate('/')
@@ -39,7 +39,7 @@ const Course_info_id = () => {
                     return (
                         <div key={i}>
                             <About_your_course name={d.name} age={d.year} details={d.Additional_details}
-                                id2={d.type} />
+                                id={d.id} />
                         </div>
                     )
                 })}
