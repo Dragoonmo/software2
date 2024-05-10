@@ -27,7 +27,7 @@ const Your_problem_vet = () => {
         <>
             <Header href1={"/#"} a1={""} href2={"/common_vete"} a2={"FAQs"} href3={"/all_follow"} a3={"All Follow"} href4={"/Forum_vet"} a4={"Forum"} href6={"/#"} a6={""} href7={"/profile_vet"} a7={<div id="login-btn" className="fas fa-user"></div>} href8={"Home_vet"} a8={<FontAwesomeIcon icon={faHouse} />} log={'/#'} log2={<div id="login-btn"><FontAwesomeIcon icon={faRightFromBracket} /></div>} />
 
-            <section className="pricing" id="pricing" style={{ "margin-top": "2400px" }}>
+            <section className="pricing" id="pricing" style={{ "margin-top": "00px" }}>
                 <h2 className="heading" style={{ "margin-left": "90px" }}>Forum</h2>
 
                 <div className="box-container" style={{ "width": "600px" }}>
