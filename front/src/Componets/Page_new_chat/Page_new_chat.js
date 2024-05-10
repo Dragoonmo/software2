@@ -16,8 +16,10 @@ const Page_new_chat = (props) => {
       .then(
         res=>{
           var e=res.data.result12
-          navigate(`/NewChat/${e}`)
-        }
+          
+          setTimeout(() => {
+            navigate(`/NewChat/${e}`); 
+          }, 2000);}
       ).catch()
       
     }

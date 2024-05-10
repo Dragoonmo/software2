@@ -33,7 +33,7 @@ const All_followw = () => {
                 {Info.map((d, i) => {
                     return (
                         <div key={i}>
-                            <All_follow name={d.name} age={d.age} details={d.Additional_details}
+                            <All_follow name={d.name} age={d.year} details={d.Additional_details}
                                 id2={d.courss_id_f} />
                         </div>
                     )

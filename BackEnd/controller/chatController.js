@@ -22,14 +22,14 @@ function show_user(req,res){
 else return res.json({valid:false}) 
 }
 function creat_caht(req,res){
-    if(req.session.username){
-    var s= req.session.username
+    if(req.session.username){ 
+    var s= req.session.username 
     var id=req.params.id
     var sql2='SELECT special FROM chats WHERE special=(SELECT max(special) from chats)'
     var sql1='select email from user_infos where id=?'
     db.query(sql1,[id],(error,result)=>{
         if(error) console.log(error)
-        var reciver=result[0].email
+        var reciver=result[0].email 
         db.query(sql2,(error,result1)=>{
             if(error) console.log(error)
             var max =result1[0].special+1
@@ -62,7 +62,7 @@ function open_chats(req,res){
             return res.json({result2,name:result[0].reciver,idd:result[0].chat_id,result,valid:true})
         })
     })
-}
+} 
 else return res.json({valid:false})
 }
 function send_message_id(req,res){
@@ -82,7 +82,7 @@ else return res.json({valid:false})
 function search_user (req,res){
     if(req.session.username){
     var name=req.params.Name
-    sql='select * from user_infos where first_name like ? or last_name like? and email!=?'
+    sql='select * from user_infos where (first_name like ? or last_name like?) and email!=? and email not in (select reciver from chats)'
     db.query(sql,['%'+ name+'%','%'+ name+'%',req.session.username],(err,result)=>{
         if(err) console.log(err)
         console.log(result)
